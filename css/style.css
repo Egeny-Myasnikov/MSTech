@@ -23,6 +23,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Prata", Arial, sans-serif;
 	color: var(--main-color-text);
@@ -292,6 +296,21 @@ li {
 	border-radius: 5px;
 	font-size: 16px;
 	color: #4f4f4f;
+	outline: none;
+	transition: border 0.3s ease;
+}
+
+.contact__input:focus {
+	border: 1px solid #d2f1fa;
+}
+
+.contact__input::placeholder {
+	transition: transform 0.3s ease;
+	font-size: 0.9em;
+}
+
+.contact__input:focus::placeholder {
+	transform: translateY(-200%);
 }
 
 .contact__label {
@@ -304,6 +323,11 @@ li {
 .contact__checkbox {
 	width: 20px;
 	height: 20px;
+}
+
+.contact__link {
+	color: inherit;
+	text-decoration: underline;
 }
 
 .contact__button {
